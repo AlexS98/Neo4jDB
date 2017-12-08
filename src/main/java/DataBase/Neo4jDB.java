@@ -1,12 +1,14 @@
+package DataBase;
+
 import org.neo4j.driver.v1.*;
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.neo4j.driver.v1.Values.parameters;
 
-public class Main
+public class Neo4jDB
 {
-    public static Driver driver;
+    public static Driver driver = null;
 
     public static void addUser(String name, int age, int id, String sex, String[] posts) {
         try (Session session = driver.session()) {
@@ -177,7 +179,7 @@ public class Main
         return resultList.toString();
     }
 
-    public Main()
+    public Neo4jDB()
     {
         driver = GraphDatabase.driver("bolt://localhost:7687", AuthTokens.basic("neo4j", "neo4j"));
     }
