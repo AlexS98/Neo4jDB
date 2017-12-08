@@ -1,4 +1,4 @@
-package DataBase;
+package database;
 
 import org.junit.Assert;
 import org.junit.BeforeClass;

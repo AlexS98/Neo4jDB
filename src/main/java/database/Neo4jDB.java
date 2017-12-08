@@ -1,4 +1,4 @@
-package DataBase;
+package database;
 
 import org.neo4j.driver.v1.*;
 import java.util.ArrayList;
